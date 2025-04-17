@@ -163,7 +163,14 @@ vim.opt.confirm = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-
+vim.keymap.set('n', ';', 'l')
+vim.keymap.set('n', 'l', 'k')
+vim.keymap.set('n', 'k', 'j')
+vim.keymap.set('n', 'j', 'h')
+vim.keymap.set('n', '<C-w>j', '<C-w>h')
+vim.keymap.set('n', '<C-w>k', '<C-w>j')
+vim.keymap.set('n', '<C-w>l', '<C-w>k')
+vim.keymap.set('n', '<C-w>;', '<C-w>l')
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
